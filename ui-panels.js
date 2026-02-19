@@ -5,7 +5,7 @@
 const Panels = {
     currentCountry: null,
     clockInterval: null,
-    unsplashAccessKey: 'vwbBBIjOw9VBsbU-wSHGw2GECrtVObvL5ED8aVeStig', // Unsplash Access Key
+    pexelsApiKey: 'z9QxT1WZAAghGhWm0lCXNujLnYpKxTgvZexrriISEN6vbUdeNBgseSDH', // Pexels API Key
 
 
     init() {
@@ -128,7 +128,7 @@ const Panels = {
             // Fetch and apply background image
             try {
                 const query = city.photo || city.name;
-                const imageUrl = await this.fetchUnsplashImage(query, 'landscape');
+                const imageUrl = await this.fetchPexelsImage(query, 'landscape');
                 if (imageUrl) {
                     const bgEntry = chip.querySelector('.city-chip-bg');
                     if(bgEntry) {
@@ -170,7 +170,7 @@ const Panels = {
 
             try {
                 const query = photo.query || photo.title; // Use English query if available
-                const imageUrl = await this.fetchUnsplashImage(query, 'landscape');
+                const imageUrl = await this.fetchPexelsImage(query, 'landscape');
                 
                 if (imageUrl) {
                      card.innerHTML = `
@@ -199,20 +199,29 @@ const Panels = {
         });
     },
 
-    async fetchUnsplashImage(query, orientation = 'landscape') {
+    async fetchPexelsImage(query, orientation = 'landscape') {
         try {
-            // Add a random sig to prevent aggressive caching if any
-            const randomSig = Math.round(Math.random() * 10000); 
-            const url = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&orientation=${orientation}&client_id=${this.unsplashAccessKey}&sig=${randomSig}`;
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`Unsplash API Error: ${response.status}`);
+            const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&orientation=${orientation}&per_page=1&page=${Math.floor(Math.random() * 5) + 1}`;
+            
+            const response = await fetch(url, {
+                headers: {
+                    Authorization: this.pexelsApiKey
+                }
+            });
+
+            if (!response.ok) throw new Error(`Pexels API Error: ${response.status}`);
+            
             const data = await response.json();
-            return data.urls.regular; 
+            if (data.photos && data.photos.length > 0) {
+                 return data.photos[0].src.large; 
+            }
+            throw new Error('No photos found');
+
         } catch (error) {
-            console.warn('Unsplash fetch failed, falling back to Picsum:', error);
-            // Fallback to Picsum if Unsplash fails (limit reached, etc.)
-            const seed = query.replace(/\s+/g, '-').toLowerCase() + Math.random(); // Randomize fallback too
-            return `https://picsum.photos/seed/${encodeURIComponent(seed)}/400/300`;
+            console.warn('Pexels fetch failed, falling back to Picsum:', error);
+            // Fallback to Picsum
+            const seed = query.replace(/\s+/g, '-').toLowerCase() + Math.random();
+            return `https://picsum.photos/seed/${encodeURIComponent(seed)}/800/600`;
         }
     },
 
@@ -298,7 +307,7 @@ const Panels = {
         
         try {
             // Race between fetch and a 5s timeout
-            const fetchPromise = this.fetchUnsplashImage(query, 'landscape');
+            const fetchPromise = this.fetchPexelsImage(query, 'landscape');
             const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000));
             
             const imageUrl = await Promise.race([fetchPromise, timeoutPromise]);
