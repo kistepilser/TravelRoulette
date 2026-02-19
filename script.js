@@ -797,7 +797,7 @@ const UI = {
 
     hideInfoCard() {
         this.elements.infoCard.classList.remove('visible');
-        Panels.hideLeftPanel(false);
+        Panels.hideLeftPanel();
         this.elements.controlPanel.classList.remove('hidden');
         World.globe.controls().autoRotate = true;
         World.clearAnimations();

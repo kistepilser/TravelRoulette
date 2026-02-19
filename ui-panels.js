@@ -16,8 +16,18 @@ const Panels = {
         if (cityModal) cityModal.addEventListener('click', (e) => { if (e.target === cityModal) this.closeCityModal(); });
 
         // Left panel close
+        // Left panel close
         const leftPanelClose = document.getElementById('left-panel-close');
-        if (leftPanelClose) leftPanelClose.addEventListener('click', () => this.hideLeftPanel());
+        if (leftPanelClose) {
+            leftPanelClose.addEventListener('click', () => {
+                this.hideLeftPanel();
+                // Restore info-card on mobile/tablet when details panel is closed
+                if (window.matchMedia('(max-width: 1024px)').matches && this.currentCountry) {
+                    const infoCard = document.getElementById('info-card');
+                    if (infoCard) infoCard.classList.add('visible');
+                }
+            });
+        }
 
         // Lightbox init
         this.initLightbox();
@@ -94,15 +104,9 @@ const Panels = {
         }
     },
 
-    hideLeftPanel(restoreInfoCard = true) {
+    hideLeftPanel() {
         const panel = document.getElementById('left-panel');
         if (panel) panel.classList.remove('visible');
-
-        // Restore info-card on mobile/tablet when details panel is closed
-        if (restoreInfoCard && window.matchMedia('(max-width: 1024px)').matches && this.currentCountry) {
-            const infoCard = document.getElementById('info-card');
-            if (infoCard) infoCard.classList.add('visible');
-        }
     },
 
     // ======== CITY CHIPS ========
