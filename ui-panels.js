@@ -83,11 +83,23 @@ const Panels = {
     showLeftPanel() {
         const panel = document.getElementById('left-panel');
         if (panel) panel.classList.add('visible');
+
+        // On mobile, hide the bottom info-card when opening the full panel
+        if (window.innerWidth <= 768) {
+            const infoCard = document.getElementById('info-card');
+            if (infoCard) infoCard.classList.remove('visible');
+        }
     },
 
     hideLeftPanel() {
         const panel = document.getElementById('left-panel');
         if (panel) panel.classList.remove('visible');
+
+        // On mobile, show the bottom info-card back when closing the full panel
+        if (window.innerWidth <= 768 && this.currentCountry) {
+            const infoCard = document.getElementById('info-card');
+            if (infoCard) infoCard.classList.add('visible');
+        }
     },
 
     // ======== CITY CHIPS ========
