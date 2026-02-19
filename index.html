@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0a0a14">
+    <meta name="description" content="3D Travel Roulette - Выбери свое следующее приключение">
+    
+    <title>Travel Roulette 3D</title>
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://flagcdn.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Dependencies -->
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.31.0/dist/globe.gl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    
+    <!-- Country Data (split files) -->
+    <script src="data/countries-1-6.js"></script>
+    <script src="data/countries-7-13.js"></script>
+    <script src="data/countries-14-19.js"></script>
+    <script src="data/countries-20-25.js"></script>
+    <script src="data/countries-26-29.js"></script>
+    <script src="data/countries-30-35.js"></script>
+    <script src="data/countries-36-39.js"></script>
+    <script src="data/countries-40-45.js"></script>
+    <script src="data/countries-46-51.js"></script>
+    <script src="data/countries-52-58.js"></script>
+    <script src="data/countries-59-64.js"></script>
+    <script src="data/index.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <!-- Ambient Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Main Globe Container -->
+    <div id="globe-container"></div>
+    
+    <!-- Top UI Bar -->
+    <header class="top-bar glass-morph">
+        <div class="logo">
+            <span class="icon">✈️</span>
+            <h1>Travel Roulette</h1>
+        </div>
+        <div class="status-indicator" id="status">
+            <span class="pulse"></span>
+            <span class="text">Готов</span>
+        </div>
+    </header>
+    
+    <!-- Bottom Control Panel -->
+    <section class="control-panel glass-morph" id="control-panel">
+        <button class="btn-primary" id="start-btn">
+            <span class="btn-icon">🎲</span>
+            <span class="btn-text">Начать путешествие</span>
+        </button>
+        <div class="hint">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 13H9v-6h2v6zm0-8H9V5h2v2z" fill="currentColor"/>
+            </svg>
+            <span>Нажмите, чтобы найти следующую страну</span>
+        </div>
+    </section>
+    
+    <!-- Left Sidebar Panel (cities, photos, flights) -->
+    <aside class="left-panel glass-morph" id="left-panel">
+        <div class="left-panel-header">
+            <h3>📋 Подробности</h3>
+            <button class="close-btn" id="left-panel-close" aria-label="Закрыть">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="left-panel-body">
+            <!-- Cities -->
+            <div class="left-section">
+                <div class="section-title">🏙️ Города</div>
+                <div class="city-chips" id="city-chips"></div>
+            </div>
+            <!-- Photo Gallery -->
+            <div class="left-section">
+                <div class="section-title">📸 Фотокарточки</div>
+                <div class="left-gallery" id="left-gallery"></div>
+            </div>
+            <!-- Flights -->
+            <div class="left-section">
+                <div class="section-title">✈️ Цены на билеты</div>
+                <div class="left-flights" id="left-flights"></div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Information Card (right side — country data) -->
+    <article class="info-card glass-morph" id="info-card">
+        <div class="card-header">
+            <img class="country-flag-img" id="country-flag" src="" alt="Флаг">
+            <div class="card-header-text">
+                <h2 class="country-name" id="country-name">Загрузка...</h2>
+                <p class="country-desc" id="country-desc"></p>
+            </div>
+            <button class="close-btn" id="close-btn" aria-label="Закрыть">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="info-row">
+                <span class="icon">💰</span>
+                <div class="info-content">
+                    <span class="label">Бюджет</span>
+                    <span class="value" id="budget">--</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <span class="icon">📋</span>
+                <div class="info-content">
+                    <span class="label">Виза для РФ</span>
+                    <span class="value" id="visa">--</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <span class="icon">🌐</span>
+                <div class="info-content">
+                    <span class="label">Язык</span>
+                    <span class="value" id="language">--</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <span class="icon">🕐</span>
+                <div class="info-content">
+                    <span class="label">Местное время</span>
+                    <span class="value" id="local-time">--</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <span class="icon">💱</span>
+                <div class="info-content">
+                    <span class="label">Валюта</span>
+                    <span class="value" id="currency">--</span>
+                </div>
+            </div>
+            <div class="info-row">
+                <span class="icon">🛫</span>
+                <div class="info-content">
+                    <span class="label">Транспорт</span>
+                    <span class="value" id="transport">--</span>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn-secondary" id="retry-btn">
+                <span>🔄 Попробовать снова</span>
+            </button>
+        </div>
+    </article>
+    
+    <!-- City Modal -->
+    <div class="modal-overlay" id="city-modal">
+        <div class="modal-content glass-morph">
+            <div class="modal-header">
+                <h3 id="city-name">Город</h3>
+                <button class="close-btn modal-close" id="city-modal-close" aria-label="Закрыть">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="city-photo-wrap">
+                <img id="city-photo" src="" alt="" loading="lazy">
+                <div class="photo-placeholder" id="city-photo-placeholder">📷</div>
+            </div>
+            <p class="city-description" id="city-description"></p>
+            <div class="city-info-grid">
+                <div class="city-info-item">
+                    <span class="icon">🕐</span>
+                    <div>
+                        <div class="label">Сейчас</div>
+                        <div class="value" id="city-time">--</div>
+                    </div>
+                </div>
+                <div class="city-info-item">
+                    <span class="icon">🌐</span>
+                    <div>
+                        <div class="label">Часовой пояс</div>
+                        <div class="value" id="city-timezone">--</div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-section">
+                <div class="section-title">🌡️ Средняя температура по месяцам</div>
+                <div class="weather-chart" id="weather-chart"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Standalone gallery/flights panels removed — content now in left-panel -->
+    
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading">
+        <div class="spinner"></div>
+        <p>Загрузка земли...</p>
+    </div>
+    
+    <!-- Globe Overlay (flag textures on polygons) -->
+    <script src="globe-overlay.js"></script>
+    
+    <!-- Panel Logic -->
+    <script src="ui-panels.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
