@@ -94,12 +94,12 @@ const Panels = {
         }
     },
 
-    hideLeftPanel() {
+    hideLeftPanel(restoreInfoCard = true) {
         const panel = document.getElementById('left-panel');
         if (panel) panel.classList.remove('visible');
 
         // Restore info-card on mobile/tablet when details panel is closed
-        if (window.matchMedia('(max-width: 1024px)').matches && this.currentCountry) {
+        if (restoreInfoCard && window.matchMedia('(max-width: 1024px)').matches && this.currentCountry) {
             const infoCard = document.getElementById('info-card');
             if (infoCard) infoCard.classList.add('visible');
         }
@@ -128,7 +128,7 @@ const Panels = {
             // Fetch and apply background image
             try {
                 const query = city.photo || city.name;
-                const imageUrl = await this.fetchPexelsImage(query, 'landscape');
+                const imageUrl = await this.fetchPexelsImage(query, 'landscape', country.iso);
                 if (imageUrl) {
                     const bgEntry = chip.querySelector('.city-chip-bg');
                     if(bgEntry) {
@@ -170,7 +170,7 @@ const Panels = {
 
             try {
                 const query = photo.query || photo.title; // Use English query if available
-                const imageUrl = await this.fetchPexelsImage(query, 'landscape');
+                const imageUrl = await this.fetchPexelsImage(query, 'landscape', country.iso);
                 
                 if (imageUrl) {
                      card.innerHTML = `
@@ -199,9 +199,25 @@ const Panels = {
         });
     },
 
-    async fetchPexelsImage(query, orientation = 'landscape') {
+    async fetchPexelsImage(query, orientation = 'landscape', countryIso = null) {
         try {
-            const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&orientation=${orientation}&per_page=1&page=${Math.floor(Math.random() * 5) + 1}`;
+            let finalQuery = query;
+            
+            // Try to append English country name if ISO is provided
+            if (countryIso) {
+                try {
+                    const countryName = new Intl.DisplayNames(['en'], {type: 'region'}).of(countryIso);
+                    // Append if not already part of the query (case-insensitive check)
+                    if (countryName && !query.toLowerCase().includes(countryName.toLowerCase())) {
+                        finalQuery = `${query} in ${countryName}`;
+                    }
+                } catch (e) {
+                    console.warn('Failed to get English name for ISO:', countryIso);
+                }
+            }
+
+            //console.log(`[Pexels] Searching: "${finalQuery}"`);
+            const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(finalQuery)}&orientation=${orientation}&per_page=1&page=${Math.floor(Math.random() * 5) + 1}`;
             
             const response = await fetch(url, {
                 headers: {
@@ -307,7 +323,7 @@ const Panels = {
         
         try {
             // Race between fetch and a 5s timeout
-            const fetchPromise = this.fetchPexelsImage(query, 'landscape');
+            const fetchPromise = this.fetchPexelsImage(query, 'landscape', country.iso);
             const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 5000));
             
             const imageUrl = await Promise.race([fetchPromise, timeoutPromise]);

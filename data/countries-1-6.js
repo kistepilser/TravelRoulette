@@ -5,9 +5,9 @@ const countries_1_6 = [
     numericId:'764',description:'Страна улыбок с древними храмами, тропическими пляжами и одной из лучших уличных кухонь мира.',
     language:'Тайский',timezone:'Asia/Bangkok',utcOffset:'+7',currency:'฿ Бат (THB)',
     cities:[
-      {name:'Бангкок',coords:[13.75,100.50],photo:'bangkok,thailand,temple',weather:[27,28,30,31,31,30,29,29,29,28,28,27],description:'Столица с золотыми храмами и ночными рынками'},
-      {name:'Пхукет',coords:[7.87,98.38],photo:'phuket,beach,thailand',weather:[27,28,28,29,29,28,28,28,27,27,27,27],description:'Крупнейший остров с белоснежными пляжами'},
-      {name:'Чиангмай',coords:[18.78,98.98],photo:'chiang-mai,mountains',weather:[22,24,27,29,28,27,26,26,26,25,23,22],description:'Горный город с сотнями буддийских храмов'}
+      {name:'Бангкок',coords:[13.75,100.50],photo:'bangkok-wat-arun-temple',weather:[27,28,30,31,31,30,29,29,29,28,28,27],description:'Столица с золотыми храмами и ночными рынками'},
+      {name:'Пхукет',coords:[7.87,98.38],photo:'phuket-thailand-beach-boat',weather:[27,28,28,29,29,28,28,28,27,27,27,27],description:'Крупнейший остров с белоснежными пляжами'},
+      {name:'Чиангмай',coords:[18.78,98.98],photo:'chiang-mai-temple-mountain',weather:[22,24,27,29,28,27,26,26,26,25,23,22],description:'Горный город с сотнями буддийских храмов'}
     ],
     photos:[{title:'Храм Ват Арун',query:'wat-arun-bangkok'},{title:'Пляж Майя Бэй',query:'maya-bay-thailand'},{title:'Плавучий рынок',query:'floating-market-bangkok'},{title:'Пхи-Пхи',query:'phi-phi-islands'}]
   },
@@ -16,9 +16,9 @@ const countries_1_6 = [
     numericId:'392',description:'Страна восходящего солнца — уникальное сочетание древних традиций и ультрасовременных технологий.',
     language:'Японский',timezone:'Asia/Tokyo',utcOffset:'+9',currency:'¥ Иена (JPY)',
     cities:[
-      {name:'Токио',coords:[35.68,139.69],photo:'tokyo,japan,shibuya',weather:[6,7,10,15,20,23,27,28,24,19,13,8],description:'Мегаполис контрастов — Сибуя, Акихабара, Асакуса'},
-      {name:'Киото',coords:[35.01,135.76],photo:'kyoto,temple,japan',weather:[5,6,10,16,21,24,28,29,25,19,13,7],description:'Древняя столица с 2000+ храмов и садов'},
-      {name:'Осака',coords:[34.69,135.50],photo:'osaka,dotonbori',weather:[6,7,10,16,21,25,29,30,26,20,14,8],description:'Гастрономическая столица Японии'}
+      {name:'Токио',coords:[35.68,139.69],photo:'tokyo-shibuya-crossing-night',weather:[6,7,10,15,20,23,27,28,24,19,13,8],description:'Мегаполис контрастов — Сибуя, Акихабара, Асакуса'},
+      {name:'Киото',coords:[35.01,135.76],photo:'kyoto-kinkakuji-temple',weather:[5,6,10,16,21,24,28,29,25,19,13,7],description:'Древняя столица с 2000+ храмов и садов'},
+      {name:'Осака',coords:[34.69,135.50],photo:'osaka-dotonbori-canal',weather:[6,7,10,16,21,25,29,30,26,20,14,8],description:'Гастрономическая столица Японии'}
     ],
     photos:[{title:'Гора Фудзи',query:'mount-fuji-japan'},{title:'Бамбуковая роща',query:'bamboo-grove-kyoto'},{title:'Тории Фусими',query:'fushimi-inari-kyoto'},{title:'Сибуя',query:'shibuya-crossing-tokyo'}]
   },
@@ -27,8 +27,8 @@ const countries_1_6 = [
     numericId:'360',description:'Крупнейший архипелаг мира — 17 000 островов с вулканами, рисовыми террасами и подводным миром.',
     language:'Индонезийский',timezone:'Asia/Jakarta',utcOffset:'+7',currency:'Rp Рупия (IDR)',
     cities:[
-      {name:'Бали',coords:[-8.34,115.09],photo:'bali,rice-terrace',weather:[27,27,27,27,27,26,26,26,27,27,27,27],description:'Остров богов — храмы, рисовые террасы, сёрфинг'},
-      {name:'Джакарта',coords:[-6.20,106.84],photo:'jakarta,indonesia',weather:[27,27,28,28,28,28,27,28,28,28,28,27],description:'Многомиллионная столица на Яве'}
+      {name:'Бали',coords:[-8.34,115.09],photo:'bali-rice-terrace-ubud',weather:[27,27,27,27,27,26,26,26,27,27,27,27],description:'Остров богов — храмы, рисовые террасы, сёрфинг'},
+      {name:'Джакарта',coords:[-6.20,106.84],photo:'jakarta-city-skyline',weather:[27,27,28,28,28,28,27,28,28,28,28,27],description:'Многомиллионная столица на Яве'}
     ],
     photos:[{title:'Террасы Тегаллаланг',query:'tegallalang-bali'},{title:'Храм Танах Лот',query:'tanah-lot-bali'},{title:'Комодо',query:'komodo-island'},{title:'Убуд',query:'ubud-bali'}]
   },
@@ -37,9 +37,9 @@ const countries_1_6 = [
     numericId:'704',description:'Страна драконов — от бухты Халонг до дельты Меконга, с потрясающей кухней и дружелюбными людьми.',
     language:'Вьетнамский',timezone:'Asia/Ho_Chi_Minh',utcOffset:'+7',currency:'₫ Донг (VND)',
     cities:[
-      {name:'Ханой',coords:[21.02,105.85],photo:'hanoi,vietnam,oldquarter',weather:[17,18,21,25,29,30,30,29,28,25,22,18],description:'Старинная столица с озёрами и храмами'},
-      {name:'Хошимин',coords:[10.82,106.62],photo:'ho-chi-minh,vietnam',weather:[27,28,29,30,29,28,27,27,27,27,27,27],description:'Динамичный мегаполис юга'},
-      {name:'Нячанг',coords:[12.23,109.19],photo:'nha-trang,beach',weather:[24,25,26,28,29,29,29,29,28,27,26,25],description:'Курорт с бирюзовым морем'}
+      {name:'Ханой',coords:[21.02,105.85],photo:'hanoi-train-street-old-quarter',weather:[17,18,21,25,29,30,30,29,28,25,22,18],description:'Старинная столица с озёрами и храмами'},
+      {name:'Хошимин',coords:[10.82,106.62],photo:'ho-chi-minh-city-skyline',weather:[27,28,29,30,29,28,27,27,27,27,27,27],description:'Динамичный мегаполис юга'},
+      {name:'Нячанг',coords:[12.23,109.19],photo:'nha-trang-beach-aerial',weather:[24,25,26,28,29,29,29,29,28,27,26,25],description:'Курорт с бирюзовым морем'}
     ],
     photos:[{title:'Бухта Халонг',query:'halong-bay-vietnam'},{title:'Хойан',query:'hoi-an-lanterns'},{title:'Сапа',query:'sapa-vietnam-terraces'},{title:'Фукуок',query:'phu-quoc-beach'}]
   },
@@ -48,9 +48,9 @@ const countries_1_6 = [
     numericId:'156',description:'Древнейшая цивилизация с Великой стеной, терракотовой армией и ультрасовременными мегаполисами.',
     language:'Китайский (мандарин)',timezone:'Asia/Shanghai',utcOffset:'+8',currency:'¥ Юань (CNY)',
     cities:[
-      {name:'Пекин',coords:[39.90,116.40],photo:'beijing,great-wall',weather:[-3,-1,6,14,21,25,27,26,21,14,5,-1],description:'Столица с Запретным городом и Великой стеной'},
-      {name:'Шанхай',coords:[31.23,121.47],photo:'shanghai,pudong,skyline',weather:[4,5,9,15,20,25,28,28,24,19,12,6],description:'Финансовый центр с футуристическим Пудуном'},
-      {name:'Сиань',coords:[34.26,108.94],photo:'xian,terracotta-warriors',weather:[0,3,9,15,21,26,28,27,21,15,7,2],description:'Город терракотовой армии'}
+      {name:'Пекин',coords:[39.90,116.40],photo:'beijing-forbidden-city-snow',weather:[-3,-1,6,14,21,25,27,26,21,14,5,-1],description:'Столица с Запретным городом и Великой стеной'},
+      {name:'Шанхай',coords:[31.23,121.47],photo:'shanghai-skyline-orient-pearl',weather:[4,5,9,15,20,25,28,28,24,19,12,6],description:'Финансовый центр с футуристическим Пудуном'},
+      {name:'Сиань',coords:[34.26,108.94],photo:'xian-terracotta-warriors-museum',weather:[0,3,9,15,21,26,28,27,21,15,7,2],description:'Город терракотовой армии'}
     ],
     photos:[{title:'Великая стена',query:'great-wall-china'},{title:'Запретный город',query:'forbidden-city-beijing'},{title:'Терракотовая армия',query:'terracotta-warriors'},{title:'Чжанцзяцзе',query:'zhangjiajie-china'}]
   },
@@ -59,9 +59,9 @@ const countries_1_6 = [
     numericId:'356',description:'Субконтинент контрастов — от Тадж-Махала до пляжей Гоа, с тысячелетней историей и яркой культурой.',
     language:'Хинди, Английский',timezone:'Asia/Kolkata',utcOffset:'+5:30',currency:'₹ Рупия (INR)',
     cities:[
-      {name:'Дели',coords:[28.61,77.20],photo:'delhi,india,red-fort',weather:[14,17,23,30,34,35,32,31,30,27,21,15],description:'Столица со Старым городом и Красным фортом'},
-      {name:'Гоа',coords:[15.49,73.82],photo:'goa,beach,india',weather:[26,27,28,30,30,28,27,27,28,29,28,27],description:'Тропический рай с пляжами и ночной жизнью'},
-      {name:'Джайпур',coords:[26.91,75.78],photo:'jaipur,pink-city',weather:[15,18,24,30,34,33,30,28,29,27,21,16],description:'Розовый город — дворцы и крепости Раджастхана'}
+      {name:'Дели',coords:[28.61,77.20],photo:'delhi-india-gate',weather:[14,17,23,30,34,35,32,31,30,27,21,15],description:'Столица со Старым городом и Красным фортом'},
+      {name:'Гоа',coords:[15.49,73.82],photo:'goa-palolem-beach-palm',weather:[26,27,28,30,30,28,27,27,28,29,28,27],description:'Тропический рай с пляжами и ночной жизнью'},
+      {name:'Джайпур',coords:[26.91,75.78],photo:'jaipur-hawa-mahal',weather:[15,18,24,30,34,33,30,28,29,27,21,16],description:'Розовый город — дворцы и крепости Раджастхана'}
     ],
     photos:[{title:'Тадж-Махал',query:'taj-mahal-india'},{title:'Варанаси',query:'varanasi-ganges'},{title:'Керала',query:'kerala-backwaters'},{title:'Хампи',query:'hampi-ruins-india'}]
   }

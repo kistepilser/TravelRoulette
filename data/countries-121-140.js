@@ -5,7 +5,7 @@ const countries_121_140 = [
     numericId:'528',description:'Тюльпаны, каналы, велосипеды и Ван Гог.',
     language:'Нидерландский',timezone:'Europe/Amsterdam',utcOffset:'+1',currency:'€ Евро (EUR)',
     cities:[
-      {name:'Амстердам',coords:[52.36,4.90],photo:'amsterdam-canals',weather:[3,4,8,11,16,19,21,21,18,14,8,4],description:'Город каналов и свободы'},
+      {name:'Амстердам',coords:[52.36,4.90],photo:'amsterdam-canals-bicycles',weather:[3,4,8,11,16,19,21,21,18,14,8,4],description:'Город каналов и свободы'},
       {name:'Роттердам',coords:[51.92,4.47],photo:'rotterdam-cube-houses',weather:[3,4,8,11,15,19,21,21,18,14,9,5],description:'Современная архитектура и порт'}
     ],
     photos:[{title:'Тюльпаны Кёкенхоф',query:'keukenhof-tulips'},{title:'Мельницы',query:'kinderdijk-windmills'},{title:'Каналы',query:'amsterdam-canal-boat'},{title:'Заансе-Сханс',query:'zaanse-schans'}]
@@ -26,7 +26,7 @@ const countries_121_140 = [
     language:'Английский, Ирландский',timezone:'Europe/Dublin',utcOffset:'+0',currency:'€ Евро (EUR)',
     cities:[
       {name:'Дублин',coords:[53.34,-6.26],photo:'dublin-temple-bar',weather:[5,5,7,9,12,15,17,17,15,12,8,6],description:'Литературная столица и пабы'},
-      {name:'Голуэй',coords:[53.27,-9.05],photo:'galway-ireland',weather:[5,5,7,9,12,15,16,16,14,11,8,6],description:'Культурное сердце и музыка'}
+      {name:'Голуэй',coords:[53.27,-9.05],photo:'galway-latin-quarter',weather:[5,5,7,9,12,15,16,16,14,11,8,6],description:'Культурное сердце и музыка'}
     ],
     photos:[{title:'Скалы Мохер',query:'cliffs-of-moher'},{title:'Тринити Колледж',query:'trinity-college-library'},{title:'Замки',query:'irish-castle'},{title:'Паб',query:'irish-pub-interior'}]
   },
@@ -35,7 +35,7 @@ const countries_121_140 = [
     numericId:'642',description:'Трансильвания, замки Дракулы и Карпаты.',
     language:'Румынский',timezone:'Europe/Bucharest',utcOffset:'+2',currency:'lei Лей (RON)',
     cities:[
-      {name:'Бухарест',coords:[44.42,26.10],photo:'bucharest-parliament',weather:[-2,0,6,12,18,22,24,24,19,13,6,0],description:'Маленький Париж Востока'},
+      {name:'Бухарест',coords:[44.42,26.10],photo:'palace-of-parliament-bucharest',weather:[-2,0,6,12,18,22,24,24,19,13,6,0],description:'Маленький Париж Востока'},
       {name:'Брашов',coords:[45.64,25.60],photo:'brasov-romania',weather:[-4,-2,3,9,14,18,20,20,16,10,4,-1],description:'Средневековый город в горах'}
     ],
     photos:[{title:'Замок Бран',query:'bran-castle-dracula'},{title:'Пелеш',query:'peles-castle'},{title:'Трансфэгэраш',query:'transfagarasan-highway'},{title:'Сибиу',query:'sibiu-romania'}]
@@ -45,7 +45,7 @@ const countries_121_140 = [
     numericId:'100',description:'Золотые пески, розы, ракия и православные монастыри.',
     language:'Болгарский',timezone:'Europe/Sofia',utcOffset:'+2',currency:'лв Лев (BGN)',
     cities:[
-      {name:'София',coords:[42.69,23.32],photo:'sofia-cathedral',weather:[-1,1,6,11,16,20,23,23,18,12,6,1],description:'Древняя столица у горы Витоша'},
+      {name:'София',coords:[42.69,23.32],photo:'alexander-nevsky-cathedral-sofia',weather:[-1,1,6,11,16,20,23,23,18,12,6,1],description:'Древняя столица у горы Витоша'},
       {name:'Варна',coords:[43.21,27.91],photo:'varna-cathedral',weather:[1,3,7,11,16,21,24,24,20,15,9,4],description:'Морская столица'}
     ],
     photos:[{title:'Рильский монастырь',query:'rila-monastery'},{title:'Пловдив',query:'plovdiv-amphitheatre'},{title:'Семь озер',query:'seven-rila-lakes'},{title:'Несебыр',query:'nessebar-old-town'}]
@@ -65,7 +65,7 @@ const countries_121_140 = [
     numericId:'470',description:'Рыцари, мегалиты, лазурное окно и английский язык.',
     language:'Мальтийский, Английский',timezone:'Europe/Malta',utcOffset:'+1',currency:'€ Евро (EUR)',
     cities:[
-      {name:'Валлетта',coords:[35.89,14.51],photo:'valletta-malta',weather:[13,13,14,16,20,24,27,28,26,22,18,14],description:'Город-крепость барокко'}
+      {name:'Валлетта',coords:[35.89,14.51],photo:'valletta-grand-harbour',weather:[13,13,14,16,20,24,27,28,26,22,18,14],description:'Город-крепость барокко'}
     ],
     photos:[{title:'Мдина',query:'mdina-malta'},{title:'Голубая лагуна',query:'blue-lagoon-comino'},{title:'Марсашлокк',query:'marsaxlokk-boats'},{title:'Попай Вилладж',query:'popeye-village-malta'}]
   },
@@ -74,7 +74,7 @@ const countries_121_140 = [
     numericId:'784',description:'Бурдж-Халифа, роскошь, пустыня и искусственные острова.',
     language:'Арабский',timezone:'Asia/Dubai',utcOffset:'+4',currency:'DH Дирхам (AED)',
     cities:[
-      {name:'Дубай',coords:[25.20,55.27],photo:'dubai-skyline',weather:[19,20,23,27,31,33,35,35,33,29,25,21],description:'Город рекордов и шопинга'},
+      {name:'Дубай',coords:[25.20,55.27],photo:'dubai-marina-skyline',weather:[19,20,23,27,31,33,35,35,33,29,25,21],description:'Город рекордов и шопинга'},
       {name:'Абу-Даби',coords:[24.45,54.37],photo:'sheikh-zayed-mosque',weather:[18,20,23,27,31,34,36,36,33,29,24,20],description:'Столица, мечеть Шейха Зайда'}
     ],
     photos:[{title:'Бурдж-Халифа',query:'burj-khalifa'},{title:'Пустыня',query:'dubai-desert-safari'},{title:'Пальма Джумейра',query:'palm-jumeirah'},{title:'Лувр Абу-Даби',query:'louvre-abu-dhabi'}]
@@ -84,7 +84,7 @@ const countries_121_140 = [
     numericId:'512',description:'Фьорды Аравии, старинные форты, оазисы и ладан.',
     language:'Арабский',timezone:'Asia/Muscat',utcOffset:'+4',currency:'RO Риал (OMR)',
     cities:[
-      {name:'Маскат',coords:[23.58,58.40],photo:'muscat-oman',weather:[20,21,24,29,33,35,35,34,33,30,25,21],description:'Белый город между гор и морем'}
+      {name:'Маскат',coords:[23.58,58.40],photo:'muscat-corniche-oman',weather:[20,21,24,29,33,35,35,34,33,30,25,21],description:'Белый город между гор и морем'}
     ],
     photos:[{title:'Вади Шаб',query:'wadi-shab'},{title:'Мечеть Султана',query:'sultan-qaboos-grand-mosque'},{title:'Пустыня Вахиба',query:'wahiba-sands'},{title:'Низва',query:'nizwa-fort'}]
   },
@@ -112,7 +112,7 @@ const countries_121_140 = [
     numericId:'858',description:'Южноамериканская Швейцария, пляжи, мате и спокойствие.',
     language:'Испанский',timezone:'America/Montevideo',utcOffset:'-3',currency:'$ Песо (UYU)',
     cities:[
-      {name:'Монтевидео',coords:[-34.90,-56.16],photo:'montevideo-rambla',weather:[23,23,21,18,15,12,11,13,14,17,20,22],description:'Столица на берегу Рио-де-ла-Плата'},
+      {name:'Монтевидео',coords:[-34.90,-56.16],photo:'montevideo-pocitos-beach',weather:[23,23,21,18,15,12,11,13,14,17,20,22],description:'Столица на берегу Рио-де-ла-Плата'},
       {name:'Пунта-дель-Эсте',coords:[-34.96,-54.94],photo:'punta-del-este-fingers',weather:[22,22,21,18,15,12,11,12,14,16,19,21],description:'Элитный курорт, "Пальцы"'}
     ],
     photos:[{title:'Касапуэбло',query:'casapueblo-uruguay'},{title:'Колония',query:'colonia-del-sacramento'},{title:'Пляжи',query:'uruguay-beach'},{title:'Мате',query:'yerba-mate-uruguay'}]
@@ -141,7 +141,7 @@ const countries_121_140 = [
     numericId:'388',description:'Регги, Боб Марли, пляжи и водопады.',
     language:'Английский',timezone:'America/Jamaica',utcOffset:'-5',currency:'J$ Доллар (JMD)',
     cities:[
-      {name:'Кингстон',coords:[17.97,-76.79],photo:'kingston-jamaica',weather:[27,27,28,29,29,30,30,30,29,29,29,28],description:'Музей Боба Марли и культура'},
+      {name:'Кингстон',coords:[17.97,-76.79],photo:'kingston-jamaica-city-view',weather:[27,27,28,29,29,30,30,30,29,29,29,28],description:'Музей Боба Марли и культура'},
       {name:'Монтего-Бей',coords:[18.47,-77.91],photo:'montego-bay-beach',weather:[26,26,27,28,29,30,30,30,29,29,28,27],description:'Курорты и пляжи'}
     ],
     photos:[{title:'Водопады Даннс-Ривер',query:'dunns-river-falls'},{title:'Негрил',query:'negril-seven-mile-beach'},{title:'Голубые горы',query:'blue-mountains-jamaica'},{title:'Растафари',query:'rastafarian-colors'}]
@@ -160,7 +160,7 @@ const countries_121_140 = [
     numericId:'231',description:'Колыбель цивилизации, кофе, Лалибела и племена.',
     language:'Амхарский',timezone:'Africa/Addis_Ababa',utcOffset:'+3',currency:'Br Быр (ETB)',
     cities:[
-      {name:'Аддис-Абеба',coords:[9.00,38.75],photo:'addis-ababa-city',weather:[16,17,18,19,19,18,17,17,17,17,16,15],description:'Столица Африки, музеи'}
+      {name:'Аддис-Абеба',coords:[9.00,38.75],photo:'addis-ababa-meskel-square',weather:[16,17,18,19,19,18,17,17,17,17,16,15],description:'Столица Африки, музеи'}
     ],
     photos:[{title:'Лалибела',query:'lalibela-churches'},{title:'Вулкан Даллол',query:'dallol-volcano'},{title:'Племена Омо',query:'omo-valley-tribes'},{title:'Симиен',query:'simien-mountains-baboon'}]
   },
@@ -169,7 +169,7 @@ const countries_121_140 = [
     numericId:'516',description:'Пустыня Намиб, дюны, Берег Скелетов и сафари.',
     language:'Английский',timezone:'Africa/Windhoek',utcOffset:'+2',currency:'$ Доллар (NAD)',
     cities:[
-      {name:'Виндхук',coords:[-22.56,17.06],photo:'windhoek-church',weather:[23,22,21,19,16,13,13,16,20,22,23,24],description:'Немецкая архитектура в Африке'},
+      {name:'Виндхук',coords:[-22.56,17.06],photo:'christuskirche-windhoek',weather:[23,22,21,19,16,13,13,16,20,22,23,24],description:'Немецкая архитектура в Африке'},
       {name:'Свакопмунд',coords:[-22.68,14.53],photo:'swakopmund-namibia',weather:[17,18,17,16,15,15,14,14,14,15,16,17],description:'Курорт у пустыни'}
     ],
     photos:[{title:'Соссусфлей',query:'sossusvlei-dunes'},{title:'Мертвая долина',query:'deadvlei-trees'},{title:'Берег Скелетов',query:'skeleton-coast-shipwreck'},{title:'Этоша',query:'etosha-national-park'}]
@@ -188,7 +188,7 @@ const countries_121_140 = [
     numericId:'450',description:'Лемуры, баобабы, уникальная природа и ваниль.',
     language:'Малагасийский, Французский',timezone:'Indian/Antananarivo',utcOffset:'+3',currency:'Ar Ариари (MGA)',
     cities:[
-      {name:'Антананариву',coords:[-18.87,47.50],photo:'antananarivo-city',weather:[20,20,20,19,17,15,14,15,17,19,20,20],description:'Столица на холмах'}
+      {name:'Антананариву',coords:[-18.87,47.50],photo:'antananarivo-rova',weather:[20,20,20,19,17,15,14,15,17,19,20,20],description:'Столица на холмах'}
     ],
     photos:[{title:'Аллея Баобабов',query:'avenue-of-the-baobabs'},{title:'Лемуры',query:'ring-tailed-lemur'},{title:'Цинги',query:'tsingy-de-bemaraha'},{title:'Нуси-Бе',query:'nosy-be-beach'}]
   }

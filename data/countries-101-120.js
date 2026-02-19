@@ -5,7 +5,7 @@ const countries_101_120 = [
     numericId:'840',description:'Гранд-Каньон, Голливуд, Нью-Йорк и национальные парки.',
     language:'Английский',timezone:'America/New_York',utcOffset:'-5',currency:'$ Доллар (USD)',
     cities:[
-      {name:'Нью-Йорк',coords:[40.71,-74.00],photo:'nyc-skyline-night',weather:[0,2,7,13,18,24,27,26,22,16,10,3],description:'Таймс-сквер, Центральный парк и Бродвей'},
+      {name:'Нью-Йорк',coords:[40.71,-74.00],photo:'nyc-skyline-manhattan-night',weather:[0,2,7,13,18,24,27,26,22,16,10,3],description:'Таймс-сквер, Центральный парк и Бродвей'},
       {name:'Лос-Анджелес',coords:[34.05,-118.24],photo:'hollywood-sign',weather:[14,15,16,18,20,22,25,25,24,21,17,14],description:'Голливуд, пляжи и Санта-Моника'}
     ],
     photos:[{title:'Гранд-Каньон',query:'grand-canyon-sunset'},{title:'Йеллоустоун',query:'yellowstone-national-park'},{title:'Статуя Свободы',query:'statue-of-liberty'},{title:'Золотые Ворота',query:'golden-gate-bridge'}]
@@ -25,7 +25,7 @@ const countries_101_120 = [
     numericId:'076',description:'Карнавал, Амазонка, футбол и пляжи Копакабаны.',
     language:'Португальский',timezone:'America/Sao_Paulo',utcOffset:'-3',currency:'R$ Реал (BRL)',
     cities:[
-      {name:'Рио-де-Жанейро',coords:[-22.90,-43.17],photo:'rio-de-janeiro-christ',weather:[26,27,26,25,23,22,21,22,22,23,24,25],description:'Христос-Искупитель, Сахарная Голова'},
+      {name:'Рио-де-Жанейро',coords:[-22.90,-43.17],photo:'christ-the-redeemer-rio',weather:[26,27,26,25,23,22,21,22,22,23,24,25],description:'Христос-Искупитель, Сахарная Голова'},
       {name:'Сан-Паулу',coords:[-23.55,-46.63],photo:'sao-paulo-skyline',weather:[22,22,22,20,18,17,17,18,19,20,21,21],description:'Мегаполис небоскребов и граффити'}
     ],
     photos:[{title:'Игуасу',query:'iguazu-falls-brazil'},{title:'Амазонка',query:'amazon-rainforest-river'},{title:'Копакабана',query:'copacabana-beach'},{title:'Карнавал',query:'rio-carnival'}]
@@ -35,7 +35,7 @@ const countries_101_120 = [
     numericId:'032',description:'Танго, стейки, Патагония и ледники.',
     language:'Испанский',timezone:'America/Argentina/Buenos_Aires',utcOffset:'-3',currency:'$ Песо (ARS)',
     cities:[
-      {name:'Буэнос-Айрес',coords:[-34.60,-58.38],photo:'buenos-aires-obelisk',weather:[25,24,22,18,15,12,11,13,15,18,21,24],description:'Париж Южной Америки'},
+      {name:'Буэнос-Айрес',coords:[-34.60,-58.38],photo:'obelisco-buenos-aires',weather:[25,24,22,18,15,12,11,13,15,18,21,24],description:'Париж Южной Америки'},
       {name:'Ушуая',coords:[-54.80,-68.30],photo:'ushuaia-lighthouse',weather:[10,9,7,5,3,2,2,3,5,8,9,10],description:'Край света, Огненная Земля'}
     ],
     photos:[{title:'Перито-Морено',query:'perito-moreno-glacier'},{title:'Игуасу',query:'iguazu-falls-argentina'},{title:'Патагония',query:'fitz-roy-mountain'},{title:'Танго',query:'tango-dancers'}]
@@ -45,7 +45,7 @@ const countries_101_120 = [
     numericId:'604',description:'Мачу-Пикчу, Анды, ламы и кухня инков.',
     language:'Испанский',timezone:'America/Lima',utcOffset:'-5',currency:'S/ Соль (PEN)',
     cities:[
-      {name:'Лима',coords:[-12.04,-77.04],photo:'lima-peru-coast',weather:[23,24,24,22,20,19,18,18,19,20,21,22],description:'Гастрономическая столица на скалах'},
+      {name:'Лима',coords:[-12.04,-77.04],photo:'lima-miraflores-coast',weather:[23,24,24,22,20,19,18,18,19,20,21,22],description:'Гастрономическая столица на скалах'},
       {name:'Куско',coords:[-13.53,-71.96],photo:'cusco-plaza',weather:[13,13,13,13,12,11,11,12,13,14,14,13],description:'Древняя столица Инков'}
     ],
     photos:[{title:'Мачу-Пикчу',query:'machu-picchu'},{title:'Радужная гора',query:'rainbow-mountain-peru'},{title:'Лама',query:'llama-peru'},{title:'Титикака',query:'lake-titicaca'}]
@@ -55,7 +55,7 @@ const countries_101_120 = [
     numericId:'152',description:'Самая длинная страна, Атакама, вино и Патагония.',
     language:'Испанский',timezone:'America/Santiago',utcOffset:'-3',currency:'$ Песо (CLP)',
     cities:[
-      {name:'Сантьяго',coords:[-33.44,-70.66],photo:'santiago-chile-andes',weather:[21,20,18,15,12,9,9,10,12,15,18,20],description:'Мегаполис у подножия Анд'},
+      {name:'Сантьяго',coords:[-33.44,-70.66],photo:'santiago-costanera-center-andes',weather:[21,20,18,15,12,9,9,10,12,15,18,20],description:'Мегаполис у подножия Анд'},
       {name:'Вальпараисо',coords:[-33.04,-71.61],photo:'valparaiso-colorful-houses',weather:[17,17,16,14,13,12,11,12,13,14,15,16],description:'Город художников и фуникулеров'}
     ],
     photos:[{title:'Торрес-дель-Пайне',query:'torres-del-paine'},{title:'Атакама',query:'atacama-desert-moon-valley'},{title:'Остров Пасхи',query:'easter-island-moai'},{title:'Виноградники',query:'chilean-vineyard'}]
@@ -75,7 +75,7 @@ const countries_101_120 = [
     numericId:'192',description:'Остров свободы, ретро-авто, сигары, ром и пляжи.',
     language:'Испанский',timezone:'America/Havana',utcOffset:'-5',currency:'$ Песо (CUP)',
     cities:[
-      {name:'Гавана',coords:[23.11,-82.36],photo:'havana-capitol',weather:[22,22,24,25,27,28,29,29,28,27,25,23],description:'Колониальная архитектура и малекон'},
+      {name:'Гавана',coords:[23.11,-82.36],photo:'havana-capitolio',weather:[22,22,24,25,27,28,29,29,28,27,25,23],description:'Колониальная архитектура и малекон'},
       {name:'Варадеро',coords:[23.15,-81.24],photo:'varadero-beach',weather:[22,23,24,26,27,28,29,29,29,27,26,24],description:'Белоснежные пляжи и курорты'}
     ],
     photos:[{title:'Ретро-авто',query:'havana-vintage-car'},{title:'Виньялес',query:'vinales-valley'},{title:'Тринидад',query:'trinidad-cuba'},{title:'Сигары',query:'cuban-cigar'}]
@@ -85,7 +85,7 @@ const countries_101_120 = [
     numericId:'214',description:'Тропический рай, пляжи Баваро, киты и танцы.',
     language:'Испанский',timezone:'America/Santo_Domingo',utcOffset:'-4',currency:'$ Песо (DOP)',
     cities:[
-      {name:'Пунта-Кана',coords:[18.56,-68.37],photo:'punta-cana-beach',weather:[25,25,26,27,27,28,28,28,28,27,27,26],description:'Лучшие пляжи и пальмы'},
+      {name:'Пунта-Кана',coords:[18.56,-68.37],photo:'punta-cana-palm-beach',weather:[25,25,26,27,27,28,28,28,28,27,27,26],description:'Лучшие пляжи и пальмы'},
       {name:'Санто-Доминго',coords:[18.48,-69.93],photo:'santo-domingo-zona-colonial',weather:[25,25,25,26,27,27,28,28,27,27,26,25],description:'Первый город Нового света'}
     ],
     photos:[{title:'Баваро',query:'bavaro-beach'},{title:'Саона',query:'saona-island'},{title:'Киты',query:'humpback-whale-samaná'},{title:'Водопады',query:'damajagua-waterfalls'}]
@@ -95,7 +95,7 @@ const countries_101_120 = [
     numericId:'818',description:'Пирамиды, Красное море, Сфинкс и древняя история.',
     language:'Арабский',timezone:'Africa/Cairo',utcOffset:'+2',currency:'£ Фунт (EGP)',
     cities:[
-      {name:'Каир',coords:[30.04,31.23],photo:'pyramids-giza',weather:[14,16,19,24,28,31,32,32,30,26,21,16],description:'Пирамиды Гизы и музей'},
+      {name:'Каир',coords:[30.04,31.23],photo:'great-pyramids-giza',weather:[14,16,19,24,28,31,32,32,30,26,21,16],description:'Пирамиды Гизы и музей'},
       {name:'Шарм-эль-Шейх',coords:[27.91,34.32],photo:'sharm-el-sheikh-coral',weather:[18,19,22,26,30,33,34,34,32,29,24,20],description:'Дайвинг и курорты'}
     ],
     photos:[{title:'Сфинкс',query:'great-sphinx-giza'},{title:'Луксор',query:'luxor-temple'},{title:'Красное море',query:'red-sea-coral-reef'},{title:'Ниль',query:'nile-river-felucca'}]
@@ -105,7 +105,7 @@ const countries_101_120 = [
     numericId:'504',description:'Восточная сказка, Атласские горы, пустыня и синий город.',
     language:'Арабский, Французский',timezone:'Africa/Casablanca',utcOffset:'+1',currency:'DH Дирхам (MAD)',
     cities:[
-      {name:'Марракеш',coords:[31.62,-7.98],photo:'marrakech-medina',weather:[13,14,17,20,24,28,31,31,27,23,18,14],description:'Площадь Джемаа аль-Фна и сады'},
+      {name:'Марракеш',coords:[31.62,-7.98],photo:'marrakech-plaza-jemaa-el-fna',weather:[13,14,17,20,24,28,31,31,27,23,18,14],description:'Площадь Джемаа аль-Фна и сады'},
       {name:'Шефшауэн',coords:[35.17,-5.26],photo:'chefchaouen-blue-city',weather:[10,11,13,16,19,24,28,28,25,20,15,11],description:'Синий город в горах'}
     ],
     photos:[{title:'Сахара',query:'sahara-desert-camels'},{title:'Айт-Бен-Хадду',query:'ait-ben-haddou'},{title:'Фес',query:'fes-tannery'},{title:'Касабланка',query:'hassan-ii-mosque'}]
@@ -115,7 +115,7 @@ const countries_101_120 = [
     numericId:'710',description:'Сафари, пингвины, Столовая гора и виноделие.',
     language:'Английский, Африкаанс',timezone:'Africa/Johannesburg',utcOffset:'+2',currency:'R Рэнд (ZAR)',
     cities:[
-      {name:'Кейптаун',coords:[-33.92,18.42],photo:'cape-town-table-mountain',weather:[22,23,21,19,17,15,14,15,16,18,20,21],description:'Мыс Доброй Надежды и пингвины'},
+      {name:'Кейптаун',coords:[-33.92,18.42],photo:'table-mountain-cape-town',weather:[22,23,21,19,17,15,14,15,16,18,20,21],description:'Мыс Доброй Надежды и пингвины'},
       {name:'Йоханнесбург',coords:[-26.20,28.04],photo:'johannesburg-skyline',weather:[20,20,19,16,13,10,10,13,16,18,19,20],description:'Золотой город'}
     ],
     photos:[{title:'Сафари (Крюгер)',query:'kruger-national-park-safari'},{title:'Болдерс-Бич',query:'boulders-beach-penguins'},{title:'Виноградники',query:'stellenbosch-vineards'},{title:'Драконовы горы',query:'drakensberg-mountains'}]
@@ -125,7 +125,7 @@ const countries_101_120 = [
     numericId:'404',description:'Великая миграция, Масаи-Мара и Килиманджаро.',
     language:'Английский, Суахили',timezone:'Africa/Nairobi',utcOffset:'+3',currency:'Sh Шиллинг (KES)',
     cities:[
-      {name:'Найроби',coords:[-1.29,36.82],photo:'nairobi-skyline',weather:[20,21,21,20,19,18,17,17,19,20,19,19],description:'Столица сафари, нацпарк в городе'},
+      {name:'Найроби',coords:[-1.29,36.82],photo:'nairobi-skyline-nature',weather:[20,21,21,20,19,18,17,17,19,20,19,19],description:'Столица сафари, нацпарк в городе'},
       {name:'Момбаса',coords:[-4.04,39.66],photo:'mombasa-beach',weather:[28,29,30,29,27,26,25,25,26,27,28,28],description:'Пляжи Индийского океана'}
     ],
     photos:[{title:'Масаи-Мара',query:'masai-mara-migration'},{title:'Жирафы',query:'giraffe-manor'},{title:'Слоны Амбосели',query:'amboseli-elephants-kilimanjaro'},{title:'Племя Масаи',query:'maasai-people'}]
@@ -145,7 +145,7 @@ const countries_101_120 = [
     numericId:'554',description:'Хоббитон, фьорды, овцы, киви и экстремальный спорт.',
     language:'Английский',timezone:'Pacific/Auckland',utcOffset:'+12',currency:'$ Доллар (NZD)',
     cities:[
-      {name:'Окленд',coords:[-36.84,174.76],photo:'auckland-sky-tower',weather:[20,20,19,16,14,12,11,12,13,15,17,19],description:'Город парусов'},
+      {name:'Окленд',coords:[-36.84,174.76],photo:'auckland-sky-tower-harbour',weather:[20,20,19,16,14,12,11,12,13,15,17,19],description:'Город парусов'},
       {name:'Квинстаун',coords:[-45.03,168.66],photo:'queenstown-new-zealand',weather:[15,15,13,10,7,4,4,6,8,10,12,14],description:'Столица приключений'}
     ],
     photos:[{title:'Милфорд-Саунд',query:'milford-sound'},{title:'Хоббитон',query:'hobbiton-movie-set'},{title:'Роторуа',query:'rotorua-geothermal'},{title:'Гора Кука',query:'mount-cook-new-zealand'}]

@@ -5,7 +5,7 @@ const countries_141_160 = [
     numericId:'352',description:'Земля льда и пламени, вулканы, гейзеры и водопады.',
     language:'Исландский',timezone:'Atlantic/Reykjavik',utcOffset:'+0',currency:'kr Крона (ISK)',
     cities:[
-      {name:'Рейкьявик',coords:[64.14,-21.94],photo:'reykjavik-church',weather:[0,1,1,3,6,9,11,10,7,4,1,0],description:'Самая северная столица'}
+      {name:'Рейкьявик',coords:[64.14,-21.94],photo:'hallgrimskirkja-reykjavik',weather:[0,1,1,3,6,9,11,10,7,4,1,0],description:'Самая северная столица'}
     ],
     photos:[{title:'Голубая лагуна',query:'blue-lagoon-iceland'},{title:'Водопад Скогафосс',query:'skogafoss-waterfall'},{title:'Черный пляж',query:'reynisfjara-beach'},{title:'Ледник',query:'vatnajokull-ice-cave'}]
   },
@@ -14,7 +14,7 @@ const countries_141_160 = [
     numericId:'499',description:'Горы, Адриатическое море, Которский залив и старинные города.',
     language:'Черногорский',timezone:'Europe/Podgorica',utcOffset:'+1',currency:'€ Евро (EUR)',
     cities:[
-      {name:'Будва',coords:[42.28,18.84],photo:'budva-old-town',weather:[8,9,12,16,21,25,29,29,24,19,13,9],description:'Курортная столица и цитадель'},
+      {name:'Будва',coords:[42.28,18.84],photo:'budva-old-town-citadel',weather:[8,9,12,16,21,25,29,29,24,19,13,9],description:'Курортная столица и цитадель'},
       {name:'Котор',coords:[42.42,18.77],photo:'kotor-bay',weather:[8,9,12,16,21,25,28,28,24,19,13,9],description:'Средневековый город в фьорде'}
     ],
     photos:[{title:'Богородица на Рифе',query:'our-lady-of-the-rocks'},{title:'Дурмитор',query:'durmitor-national-park'},{title:'Свети-Стефан',query:'sveti-stefan-island'},{title:'Мост Джурджевича',query:'djurdjevica-tara-bridge'}]
@@ -24,7 +24,7 @@ const countries_141_160 = [
     numericId:'008',description:'Два моря, горы, бункеры и гостеприимство.',
     language:'Албанский',timezone:'Europe/Tirane',utcOffset:'+1',currency:'L Лек (ALL)',
     cities:[
-      {name:'Тирана',coords:[41.32,19.81],photo:'tirana-skanderbeg-square',weather:[7,9,12,16,21,26,29,29,24,19,13,8],description:'Яркая столица и бункеры'},
+      {name:'Тирана',coords:[41.32,19.81],photo:'tirana-skanderbeg-square-monument',weather:[7,9,12,16,21,26,29,29,24,19,13,8],description:'Яркая столица и бункеры'},
       {name:'Ксамил',coords:[39.77,20.00],photo:'ksamil-beach',weather:[10,11,13,17,21,25,29,29,25,20,15,11],description:'Албанские Мальдивы'}
     ],
     photos:[{title:'Берат',query:'berat-thousand-windows'},{title:'Голубой глаз',query:'blue-eye-spring-albania'},{title:'Гирокастра',query:'gjirokastra-stone-city'},{title:'Тети',query:'theth-national-park'}]
@@ -34,7 +34,7 @@ const countries_141_160 = [
     numericId:'070',description:'Слияние востока и запада, мосты, водопады и кофе.',
     language:'Боснийский, Сербский',timezone:'Europe/Sarajevo',utcOffset:'+1',currency:'KM Марка (BAM)',
     cities:[
-      {name:'Сараево',coords:[43.85,18.41],photo:'sarajevo-old-town',weather:[-1,2,7,12,17,20,23,23,18,13,7,1],description:'Европейский Иерусалим'},
+      {name:'Сараево',coords:[43.85,18.41],photo:'sarajevo-bascarsija',weather:[-1,2,7,12,17,20,23,23,18,13,7,1],description:'Европейский Иерусалим'},
       {name:'Мостар',coords:[43.34,17.80],photo:'mostar-bridge',weather:[5,7,11,15,20,24,28,28,23,17,11,6],description:'Старый мост и бирюзовая река'}
     ],
     photos:[{title:'Водопад Кравица',query:'kravice-waterfalls'},{title:'Вишеград',query:'visegrad-bridge'},{title:'Благай',query:'blagaj-tekke'},{title:'Яйце',query:'jajce-waterfall'}]
@@ -100,7 +100,7 @@ const countries_141_160 = [
     language:'Английский, Шона',timezone:'Africa/Harare',utcOffset:'+2',currency:'$ Доллар (USD)',
     cities:[
       {name:'Хараре',coords:[-17.82,31.05],photo:'harare-city',weather:[21,21,21,20,18,16,16,18,21,24,24,22],description:'Город цветущих жакаранд'},
-      {name:'Виктория-Фоллс',coords:[-17.92,25.85],photo:'victoria-falls-zimbabwe',weather:[26,26,26,26,24,22,22,25,29,31,30,27],description:'Город у водопада'}
+      {name:'Виктория-Фоллс',coords:[-17.92,25.85],photo:'victoria-falls-zimbabwe-view',weather:[26,26,26,26,24,22,22,25,29,31,30,27],description:'Город у водопада'}
     ],
     photos:[{title:'Водопад Виктория',query:'victoria-falls-aerial'},{title:'Хванге',query:'hwange-national-park'},{title:'Балансирующие камни',query:'balancing-rocks-epworth'},{title:'Замбези',query:'zambezi-river-sunset'}]
   },
@@ -118,7 +118,7 @@ const countries_141_160 = [
     numericId:'800',description:'Жемчужина Африки, горные гориллы и исток Нила.',
     language:'Английский, Суахили',timezone:'Africa/Kampala',utcOffset:'+3',currency:'USh Шиллинг (UGX)',
     cities:[
-      {name:'Кампала',coords:[0.34,32.58],photo:'kampala-city',weather:[23,24,23,23,22,22,21,21,22,23,23,23],description:'Столица на семи холмах'}
+      {name:'Кампала',coords:[0.34,32.58],photo:'kampala-city-view',weather:[23,24,23,23,22,22,21,21,22,23,23,23],description:'Столица на семи холмах'}
     ],
     photos:[{title:'Бвинди (Гориллы)',query:'bwindi-impenetrable-forest-gorilla'},{title:'Мерчисон',query:'murchison-falls'},{title:'Озеро Виктория',query:'lake-victoria-uganda'},{title:'Шимпанзе',query:'kibale-forest-chimpanzee'}]
   },
@@ -136,8 +136,8 @@ const countries_141_160 = [
     numericId:'320',description:'Сердце мира Майя, вулканы, озеро Атитлан и колорит.',
     language:'Испанский',timezone:'America/Guatemala',utcOffset:'-6',currency:'Q Кетцаль (GTQ)',
     cities:[
-      {name:'Гватемала',coords:[14.63,-90.50],photo:'guatemala-city',weather:[18,19,20,21,21,21,21,21,21,20,19,18],description:'Столица и музеи'},
-      {name:'Антигуа',coords:[14.55,-90.73],photo:'antigua-guatemala-arch',weather:[18,18,19,20,20,20,20,20,19,19,18,18],description:'Колониальный город под вулканом'}
+      {name:'Гватемала',coords:[14.63,-90.50],photo:'guatemala-city-cathedral',weather:[18,19,20,21,21,21,21,21,21,20,19,18],description:'Столица и музеи'},
+      {name:'Антигуа',coords:[14.55,-90.73],photo:'antigua-guatemala-santa-catalina',weather:[18,18,19,20,20,20,20,20,19,19,18,18],description:'Колониальный город под вулканом'}
     ],
     photos:[{title:'Тикаль',query:'tikal-temple-sunrise'},{title:'Атитлан',query:'lake-atitlan'},{title:'Семук Чампей',query:'semuc-champey'},{title:'Фуго',query:'fuego-volcano-eruption'}]
   },
@@ -146,8 +146,8 @@ const countries_141_160 = [
     numericId:'340',description:'Рифы Роатана, руины Копан и джунгли.',
     language:'Испанский',timezone:'America/Tegucigalpa',utcOffset:'-6',currency:'L Лемпира (HNL)',
     cities:[
-      {name:'Тегусигальпа',coords:[14.07,-87.19],photo:'tegucigalpa-city',weather:[20,21,23,25,25,24,24,24,24,23,21,20],description:'Столица в горах'},
-      {name:'Роатан',coords:[16.32,-86.53],photo:'roatan-honduras',weather:[25,26,27,28,29,29,29,29,29,28,27,26],description:'Дайвинг и карибские пляжи'}
+      {name:'Тегусигальпа',coords:[14.07,-87.19],photo:'tegucigalpa-city-view',weather:[20,21,23,25,25,24,24,24,24,23,21,20],description:'Столица в горах'},
+      {name:'Роатан',coords:[16.32,-86.53],photo:'roatan-west-bay-beach',weather:[25,26,27,28,29,29,29,29,29,28,27,26],description:'Дайвинг и карибские пляжи'}
     ],
     photos:[{title:'Копан',query:'copan-ruins-macaw'},{title:'Утила',query:'utila-island'},{title:'Кайос Кочинос',query:'cayos-cochinos'},{title:'Джунгли',query:'honduras-rainforest'}]
   },
@@ -165,7 +165,7 @@ const countries_141_160 = [
     numericId:'558',description:'Земля озер и вулканов, колониальные города и серфинг.',
     language:'Испанский',timezone:'America/Managua',utcOffset:'-6',currency:'C$ Кордоба (NIO)',
     cities:[
-      {name:'Манагуа',coords:[12.11,-86.23],photo:'managua-lake',weather:[26,27,28,29,29,28,28,28,28,27,27,26],description:'Столица на озере'},
+      {name:'Манагуа',coords:[12.11,-86.23],photo:'managua-lake-xolotlan',weather:[26,27,28,29,29,28,28,28,28,27,27,26],description:'Столица на озере'},
       {name:'Гранада',coords:[11.92,-85.95],photo:'granada-nicaragua',weather:[26,27,28,29,29,28,28,28,28,27,27,26],description:'Лучший колониальный город'}
     ],
     photos:[{title:'Ометепе',query:'ometepe-island-volcano'},{title:'Масая',query:'masaya-volcano-lava'},{title:'Сан-Хуан-дель-Сур',query:'san-juan-del-sur-beach'},{title:'Кукурузные острова',query:'corn-islands-nicaragua'}]
@@ -185,7 +185,7 @@ const countries_141_160 = [
     numericId:'052',description:'Ром, крикет, Рианна и розовые пляжи.',
     language:'Английский',timezone:'America/Barbados',utcOffset:'-4',currency:'BZ$ Доллар (BBD)',
     cities:[
-      {name:'Бриджтаун',coords:[13.10,-59.61],photo:'bridgetown-barbados',weather:[25,25,26,26,27,27,27,27,27,27,27,26],description:'Столица с колониальным шармом'}
+      {name:'Бриджтаун',coords:[13.10,-59.61],photo:'bridgetown-parliament-buildings',weather:[25,25,26,26,27,27,27,27,27,27,27,26],description:'Столица с колониальным шармом'}
     ],
     photos:[{title:'Харрисонс Кейв',query:'harrisons-cave'},{title:'Крейн Бич',query:'crane-beach-barbados'},{title:'Сент-Николас',query:'st-nicholas-abbey'},{title:'Закат',query:'barbados-sunset-palm'}]
   }

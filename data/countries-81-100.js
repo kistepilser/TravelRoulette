@@ -15,7 +15,7 @@ const countries_81_100 = [
     numericId:'268',description:'Гостеприимство, вино, горы Кавказа и хинкали.',
     language:'Грузинский',timezone:'Asia/Tbilisi',utcOffset:'+4',currency:'₾ Лари (GEL)',
     cities:[
-      {name:'Тбилиси',coords:[41.71,44.82],photo:'tbilisi-old-town',weather:[2,3,7,13,18,22,25,25,20,14,8,3],description:'Старый город, серные бани и балконы'},
+      {name:'Тбилиси',coords:[41.71,44.82],photo:'tbilisi-old-town-balconies',weather:[2,3,7,13,18,22,25,25,20,14,8,3],description:'Старый город, серные бани и балконы'},
       {name:'Батуми',coords:[41.61,41.63],photo:'batumi-georgia',weather:[5,6,8,12,16,20,23,23,20,16,11,7],description:'Курорт на Черном море, небоскребы'}
     ],
     photos:[{title:'Тбилиси',query:'tbilisi-aerial'},{title:'Казбек',query:'kazbegi-church'},{title:'Виноградники',query:'kakheti-winery'},{title:'Сванетия',query:'svaneti-towers'}]
@@ -25,7 +25,7 @@ const countries_81_100 = [
     numericId:'051',description:'Древние монастыри, Арарат, дудук и абрикосы.',
     language:'Армянский',timezone:'Asia/Yerevan',utcOffset:'+4',currency:'֏ Драм (AMD)',
     cities:[
-      {name:'Ереван',coords:[40.18,44.51],photo:'yerevan-cascade',weather:[-3,-1,5,12,17,22,26,26,21,14,6,0],description:'Розовый город, Каскад и Арарат'},
+      {name:'Ереван',coords:[40.18,44.51],photo:'yerevan-cascade-monument',weather:[-3,-1,5,12,17,22,26,26,21,14,6,0],description:'Розовый город, Каскад и Арарат'},
       {name:'Гюмри',coords:[40.79,43.84],photo:'gyumri-armenia',weather:[-9,-7,-1,6,11,16,20,20,16,9,2,-5],description:'Культурная столица, черные туфовые дома'}
     ],
     photos:[{title:'Арарат',query:'mount-ararat-view'},{title:'Севан',query:'lake-sevan'},{title:'Татев',query:'tatev-monastery'},{title:'Гарни',query:'garni-temple'}]
@@ -35,7 +35,7 @@ const countries_81_100 = [
     numericId:'031',description:'Страна огней, небоскребы Баку и старинные улочки.',
     language:'Азербайджанский',timezone:'Asia/Baku',utcOffset:'+4',currency:'₼ Манат (AZN)',
     cities:[
-      {name:'Баку',coords:[40.40,49.86],photo:'baku-flame-towers',weather:[4,4,6,12,18,23,26,26,22,16,10,6],description:'Пламенные башни и старый город Ичери-шехер'}
+      {name:'Баку',coords:[40.40,49.86],photo:'baku-flame-towers-night',weather:[4,4,6,12,18,23,26,26,22,16,10,6],description:'Пламенные башни и старый город Ичери-шехер'}
     ],
     photos:[{title:'Пламенные башни',query:'flame-towers-baku'},{title:'Ичери-шехер',query:'baku-old-city'},{title:'Центр Гейдара Алиева',query:'heydar-aliyev-center'},{title:'Грязевые вулканы',query:'mud-volcanoes-azerbaijan'}]
   },
@@ -44,7 +44,7 @@ const countries_81_100 = [
     numericId:'860',description:'Шелковый путь, голубые купола, плов и восточные базары.',
     language:'Узбекский, Русский',timezone:'Asia/Tashkent',utcOffset:'+5',currency:'so\'m Сум (UZS)',
     cities:[
-      {name:'Самарканд',coords:[39.62,66.97],photo:'registan-square',weather:[0,2,8,15,20,25,27,25,20,13,7,2],description:'Сердце Шелкового пути, Регистан'},
+      {name:'Самарканд',coords:[39.62,66.97],photo:'samarkand-registan-square',weather:[0,2,8,15,20,25,27,25,20,13,7,2],description:'Сердце Шелкового пути, Регистан'},
       {name:'Бухара',coords:[39.76,64.41],photo:'bukhara-ark',weather:[1,4,10,18,24,29,31,29,23,16,9,3],description:'Город-музей, минарет Калян'}
     ],
     photos:[{title:'Регистан',query:'registan-samarkand'},{title:'Хива',query:'khiva-walled-city'},{title:'Плов',query:'uzbek-plov'},{title:'Мозаика',query:'islamic-tile-pattern'}]
@@ -54,7 +54,7 @@ const countries_81_100 = [
     numericId:'398',description:'Бескрайние степи, футуристичная Астана и горы Алматы.',
     language:'Казахский, Русский',timezone:'Asia/Almaty',utcOffset:'+6',currency:'₸ Тенге (KZT)',
     cities:[
-      {name:'Алматы',coords:[43.22,76.85],photo:'almaty-mountains',weather:[-4,-2,4,11,16,21,24,23,18,10,2,-3],description:'Город яблок у подножия гор'},
+      {name:'Алматы',coords:[43.22,76.85],photo:'almaty-trans-ili-alatau-mountains',weather:[-4,-2,4,11,16,21,24,23,18,10,2,-3],description:'Город яблок у подножия гор'},
       {name:'Астана',coords:[51.16,71.47],photo:'astana-skyline',weather:[-14,-13,-6,6,14,20,21,19,13,5,-5,-12],description:'Футуристическая столица в степи'}
     ],
     photos:[{title:'Чарынский каньон',query:'charyn-canyon'},{title:'Каинды',query:'lake-kaindy'},{title:'Байтерек',query:'bayterek-tower'},{title:'Кок-Тобе',query:'kok-tobe-almaty'}]
@@ -64,7 +64,7 @@ const countries_81_100 = [
     numericId:'417',description:'Небесные горы Тянь-Шань, юрты и озеро Иссык-Куль.',
     language:'Киргизский, Русский',timezone:'Asia/Bishkek',utcOffset:'+6',currency:'c Сом (KGS)',
     cities:[
-      {name:'Бишкек',coords:[42.87,74.59],photo:'bishkek-ala-too',weather:[-2,0,7,14,19,25,28,26,21,13,6,0],description:'Зеленая столица у гор'},
+      {name:'Бишкек',coords:[42.87,74.59],photo:'bishkek-ala-too-square',weather:[-2,0,7,14,19,25,28,26,21,13,6,0],description:'Зеленая столица у гор'},
       {name:'Каракол',coords:[42.47,78.39],photo:'karakol-mountains',weather:[-5,-4,2,9,14,18,20,19,15,8,1,-4],description:'База для треккинга и лыж'}
     ],
     photos:[{title:'Иссык-Куль',query:'issyk-kul-lake'},{title:'Юрты',query:'yurt-camp-kyrgyzstan'},{title:'Каньон Сказка',query:'skazka-canyon'},{title:'Лошади',query:'horses-kyrgyz-mountains'}]
@@ -74,7 +74,7 @@ const countries_81_100 = [
     numericId:'496',description:'Страна синего неба, кочевников, Гоби и Чингисхана.',
     language:'Монгольский',timezone:'Asia/Ulaanbaatar',utcOffset:'+8',currency:'₮ Тугрик (MNT)',
     cities:[
-      {name:'Улан-Батор',coords:[47.90,106.90],photo:'ulaanbaatar-city',weather:[-20,-16,-6,3,11,17,19,17,10,2,-9,-17],description:'Самая холодная столица мира'}
+      {name:'Улан-Батор',coords:[47.90,106.90],photo:'ulaanbaatar-sukhbaatar-square',weather:[-20,-16,-6,3,11,17,19,17,10,2,-9,-17],description:'Самая холодная столица мира'}
     ],
     photos:[{title:'Пустыня Гоби',query:'gobi-desert-dunes'},{title:'Орхон',query:'orkhon-valley'},{title:'Статуя Чингисхана',query:'genghis-khan-statue'},{title:'Беркутчи',query:'mongolian-eagle-hunter'}]
   },
@@ -170,7 +170,7 @@ const countries_81_100 = [
     numericId:'144',description:'Чай, слоны, пик Адама, серфинг и поезда в горах.',
     language:'Сингальский, Тамильский',timezone:'Asia/Colombo',utcOffset:'+5.5',currency:'Rs Рупия (LKR)',
     cities:[
-      {name:'Коломбо',coords:[6.92,79.86],photo:'colombo-sri-lanka',weather:[27,27,28,29,29,28,28,28,28,28,27,27],description:'Торговая столица и набережная'},
+      {name:'Коломбо',coords:[6.92,79.86],photo:'colombo-lotus-tower-skyline',weather:[27,27,28,29,29,28,28,28,28,28,27,27],description:'Торговая столица и набережная'},
       {name:'Канди',coords:[7.29,80.63],photo:'kandy-lake',weather:[24,25,26,27,27,26,26,26,26,26,25,24],description:'Храм Зуба Будды и горы'}
     ],
     photos:[{title:'Сигирия',query:'sigiriya-rock'},{title:'Девятиарочный мост',query:'nine-arch-bridge-ella'},{title:'Слоны',query:'pinnawala-elephant-orphanage'},{title:'Плантации чая',query:'kandy-tea-plantation'}]

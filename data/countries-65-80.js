@@ -5,7 +5,7 @@ const countries_65_80 = [
     numericId:'246',description:'Страна тысячи озер, северного сияния, сауны и Санта-Клауса.',
     language:'Финский, Шведский',timezone:'Europe/Helsinki',utcOffset:'+2',currency:'€ Евро (EUR)',
     cities:[
-      {name:'Хельсинки',coords:[60.16,24.93],photo:'helsinki-cathedral',weather:[ -5,-5,-1,5,10,15,17,16,11,6,2,-2],description:'Морская крепость Суоменлинна и дизайн'},
+      {name:'Хельсинки',coords:[60.16,24.93],photo:'helsinki-senate-square-cathedral',weather:[ -5,-5,-1,5,10,15,17,16,11,6,2,-2],description:'Морская крепость Суоменлинна и дизайн'},
       {name:'Рованиеми',coords:[66.50,25.72],photo:'rovaniemi-northern-lights',weather:[-12,-11,-6,0,6,12,15,13,8,2,-4,-9],description:'Деревня Санта-Клауса и полярный круг'}
     ],
     photos:[{title:'Северное сияние',query:'finland-northern-lights'},{title:'Озера',query:'finland-lake-summer'},{title:'Олени',query:'reindeer-finland'},{title:'Хельсинки',query:'helsinki-market-square'}]
@@ -15,7 +15,7 @@ const countries_65_80 = [
     numericId:'752',description:'Скандинавский стиль, архипелаги, ABBA и фрикадельки.',
     language:'Шведский',timezone:'Europe/Stockholm',utcOffset:'+1',currency:'kr Крона (SEK)',
     cities:[
-      {name:'Стокгольм',coords:[59.32,18.06],photo:'stockholm-gamla-stan',weather:[-3,-3,1,6,11,16,18,17,13,8,3,0],description:'Город на 14 островах, Гамла Стан'}
+      {name:'Стокгольм',coords:[59.32,18.06],photo:'stockholm-gamla-stan-street',weather:[-3,-3,1,6,11,16,18,17,13,8,3,0],description:'Город на 14 островах, Гамла Стан'}
     ],
     photos:[{title:'Гамла Стан',query:'gamla-stan-stockholm'},{title:'Архипелаг',query:'sweden-archipelago'},{title:'Метро',query:'stockholm-metro-art'},{title:'Коттедж',query:'swedish-red-cottage'}]
   },
@@ -24,7 +24,7 @@ const countries_65_80 = [
     numericId:'578',description:'Страна фьордов, гор, водопадов и троллей.',
     language:'Норвежский',timezone:'Europe/Oslo',utcOffset:'+1',currency:'kr Крона (NOK)',
     cities:[
-      {name:'Осло',coords:[59.91,10.75],photo:'oslo-city-view',weather:[-4,-3,1,6,11,16,18,17,12,7,2,-2],description:'Современная архитектура и музеи'},
+      {name:'Осло',coords:[59.91,10.75],photo:'oslo-opera-house-modern',weather:[-4,-3,1,6,11,16,18,17,12,7,2,-2],description:'Современная архитектура и музеи'},
       {name:'Берген',coords:[60.39,5.32],photo:'bergen-bryggen',weather:[2,2,4,7,10,13,15,14,12,9,6,3],description:'Ворота во фьорды, гавань Брюгген'}
     ],
     photos:[{title:'Гейрангер-фьорд',query:'geiranger-fjord'},{title:'Лофотены',query:'lofoten-islands'},{title:'Троллтунга',query:'trolltunga-hike'},{title:'Ставкирка',query:'stave-church-norway'}]
@@ -52,7 +52,7 @@ const countries_65_80 = [
     numericId:'428',description:'Югендстиль в Риге, пляжи Юрмалы и сосновые леса.',
     language:'Латышский',timezone:'Europe/Riga',utcOffset:'+2',currency:'€ Евро (EUR)',
     cities:[
-      {name:'Рига',coords:[56.94,24.10],photo:'riga-latvia',weather:[-4,-4,0,6,12,16,18,17,13,8,3,-1],description:'Столица модерна и старый город'}
+      {name:'Рига',coords:[56.94,24.10],photo:'riga-old-town-house-of-blackheads',weather:[-4,-4,0,6,12,16,18,17,13,8,3,-1],description:'Столица модерна и старый город'}
     ],
     photos:[{title:'Дом Черноголовых',query:'house-of-blackheads-riga'},{title:'Юрмала',query:'jurmala-beach'},{title:'Рундальский дворец',query:'rundale-palace'},{title:'Сигулда',query:'sigulda-castle'}]
   },
@@ -139,7 +139,7 @@ const countries_65_80 = [
     numericId:'191',description:'Тысяча островов, Дубровник ("Королевская Гавань") и Плитвицкие озера.',
     language:'Хорватский',timezone:'Europe/Zagreb',utcOffset:'+1',currency:'€ Евро (EUR)',
     cities:[
-      {name:'Загреб',coords:[45.81,15.98],photo:'zagreb-cathedral',weather:[0,2,7,12,17,21,23,22,18,12,6,1],description:'Австро-венгерская архитектура и музеи'},
+      {name:'Загреб',coords:[45.81,15.98],photo:'zagreb-st-mark-church',weather:[0,2,7,12,17,21,23,22,18,12,6,1],description:'Австро-венгерская архитектура и музеи'},
       {name:'Дубровник',coords:[42.65,18.09],photo:'dubrovnik-old-town',weather:[9,9,11,14,19,23,25,25,22,18,14,10],description:'Средневековая крепость у моря'}
     ],
     photos:[{title:'Дубровник',query:'dubrovnik-walls'},{title:'Плитвицкие озера',query:'plitvice-lakes'},{title:'Сплит',query:'split-diocletians-palace'},{title:'Хвар',query:'hvar-island'}]
