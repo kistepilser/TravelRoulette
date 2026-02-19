@@ -1401,6 +1401,9 @@ body {
   .left-panel {
     width: 480px;
   }
+  #details-btn {
+    display: none; /* Hide on large screens where panel auto-shows */
+  }
   /* Safe Scrollbar for Rounded Corners */
   .modal-content::-webkit-scrollbar-track,
   .left-panel::-webkit-scrollbar-track,

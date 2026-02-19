@@ -647,6 +647,14 @@ const UI = {
         this.elements.startBtn.addEventListener('click', () => this.handleStart());
         this.elements.closeBtn.addEventListener('click', () => this.hideInfoCard());
         this.elements.retryBtn.addEventListener('click', () => this.handleRetry());
+        
+        // Mobile Details Button
+        const detailsBtn = document.getElementById('details-btn');
+        if (detailsBtn) {
+            detailsBtn.addEventListener('click', () => {
+                Panels.showLeftPanel();
+            });
+        }
 
         // Init panels module
         Panels.init();
@@ -667,17 +675,33 @@ const UI = {
     },
 
     generateSmartSequence(length) {
+        // 1. Pick a random starting country
         let current = countriesData[Math.floor(Math.random() * countriesData.length)];
         const sequence = [current];
         const visitedIso = new Set([current.iso]);
 
         for (let i = 0; i < length - 1; i++) {
+            // 20% chance to take a "Long Haul" flight to a completely random country
+            // This prevents getting stuck in one region (e.g. Europe)
+            if (Math.random() < 0.25) {
+                const unvisited = countriesData.filter(c => !visitedIso.has(c.iso));
+                if (unvisited.length === 0) break;
+                
+                const randomNext = unvisited[Math.floor(Math.random() * unvisited.length)];
+                sequence.push(randomNext);
+                visitedIso.add(randomNext.iso);
+                current = randomNext;
+                continue;
+            }
+
+            // Otherwise, pick from nearest neighbors but with a wider pool
             const neighbors = countriesData
                 .filter(c => !visitedIso.has(c.iso))
                 .map(c => ({ country: c, dist: Geom.getDistance(current, c) }))
                 .sort((a, b) => a.dist - b.dist);
 
-            const poolSize = Math.min(neighbors.length, 5);
+            // Increased pool size from 5 to 15 to allow further jumps
+            const poolSize = Math.min(neighbors.length, 15);
             if (poolSize === 0) break;
 
             const candidates = neighbors.slice(0, poolSize);

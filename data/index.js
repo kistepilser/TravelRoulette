@@ -17,7 +17,13 @@ const countriesData = [
     ...countries_40_45,
     ...countries_46_51,
     ...countries_52_58,
-    ...countries_59_64
+    ...countries_59_64,
+    ...countries_65_80,
+    ...countries_81_100,
+    ...countries_101_120,
+    ...countries_121_140,
+    ...countries_141_160,
+    ...countries_161_190
 ];
 
 // Build lookup maps for quick access

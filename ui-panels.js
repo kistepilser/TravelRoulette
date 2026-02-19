@@ -73,7 +73,11 @@ const Panels = {
         this.renderCityChips(country);
         this.renderPhotoGallery(country);
         this.renderFlights(country);
-        this.showLeftPanel();
+        
+        // On mobile, do NOT auto-show left panel
+        if (window.innerWidth > 768) {
+            this.showLeftPanel();
+        }
     },
 
     showLeftPanel() {
@@ -156,10 +160,12 @@ const Panels = {
                 if (imageUrl) {
                      card.innerHTML = `
                         <img src="${imageUrl}" alt="${photo.title}" loading="lazy" 
-                             style="opacity:0;transition:opacity 0.5s"
+                             style="opacity:0;transition:opacity 0.5s; cursor: zoom-in;"
                              onload="this.style.opacity='1'">
                         <span>${photo.title}</span>
                     `;
+                    // Add Lightbox click handler
+                    card.querySelector('img').onclick = () => this.openLightbox(imageUrl, photo.title);
                 } else {
                      // Fallback to placeholder if API fails/no image
                     card.querySelector('.gallery-loader').style.display = 'none';
@@ -180,7 +186,9 @@ const Panels = {
 
     async fetchUnsplashImage(query, orientation = 'landscape') {
         try {
-            const url = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&orientation=${orientation}&client_id=${this.unsplashAccessKey}`;
+            // Add a random sig to prevent aggressive caching if any
+            const randomSig = Math.round(Math.random() * 10000); 
+            const url = `https://api.unsplash.com/photos/random?query=${encodeURIComponent(query)}&orientation=${orientation}&client_id=${this.unsplashAccessKey}&sig=${randomSig}`;
             const response = await fetch(url);
             if (!response.ok) throw new Error(`Unsplash API Error: ${response.status}`);
             const data = await response.json();
@@ -188,7 +196,7 @@ const Panels = {
         } catch (error) {
             console.warn('Unsplash fetch failed, falling back to Picsum:', error);
             // Fallback to Picsum if Unsplash fails (limit reached, etc.)
-            const seed = query.replace(/\s+/g, '-').toLowerCase();
+            const seed = query.replace(/\s+/g, '-').toLowerCase() + Math.random(); // Randomize fallback too
             return `https://picsum.photos/seed/${encodeURIComponent(seed)}/400/300`;
         }
     },
@@ -216,23 +224,34 @@ const Panels = {
                     <div class="flight-price">${f.price}</div>
                 </div>
             `).join('');
-        }, 800);
+        }, 600 + Math.random() * 600); // Randomize loading time
     },
 
     generateFlights(country) {
-        const airlines = ['Аэрофлот', 'S7 Airlines', 'Turkish Airlines', 'Emirates', 'Qatar Airways', 'Победа'];
+        const airlines = [
+            'Аэрофлот', 'S7 Airlines', 'Turkish Airlines', 'Emirates', 'Qatar Airways', 
+            'Победа', 'Etihad', 'FlyDubai', 'Uzbekistan Airways', 'Air Serbia'
+        ];
         const budgetStr = country.budget || '200 000 ₽';
         const budgetNum = parseInt(budgetStr.replace(/\D/g, '')) || 200000;
+        
+        // Dynamic base price based on "budget" but with more variance
         const basePrice = Math.round(budgetNum * 0.35);
 
         const now = new Date();
-        return Array.from({length: 4}, (_, i) => {
+        // Generate 3 to 5 flights randomly
+        const count = 3 + Math.floor(Math.random() * 3); 
+        
+        return Array.from({length: count}, (_, i) => {
             const date = new Date(now);
-            date.setDate(date.getDate() + 7 + Math.floor(Math.random() * 50));
-            const variation = 0.7 + Math.random() * 0.6;
+            date.setDate(date.getDate() + 7 + Math.floor(Math.random() * 90)); // Next 3 months
+            
+            // Randomize price factor (0.6x to 1.5x)
+            const variation = 0.6 + Math.random() * 0.9;
             const price = Math.round(basePrice * variation / 100) * 100;
+            
             return {
-                destination: country.cities?.[0]?.name || country.name,
+                destination: country.cities?.[Math.floor(Math.random() * country.cities.length)]?.name || country.name,
                 airline: airlines[Math.floor(Math.random() * airlines.length)],
                 date: date.toLocaleDateString('ru-RU', {day:'numeric',month:'short'}),
                 price: price.toLocaleString('ru-RU') + ' ₽'
