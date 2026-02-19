@@ -84,10 +84,13 @@ const Panels = {
         const panel = document.getElementById('left-panel');
         if (panel) panel.classList.add('visible');
 
-        // On mobile, hide the bottom info-card when opening the full panel
-        if (window.innerWidth <= 768) {
+        // Hide info-card on mobile/tablet when details panel is open
+        if (window.matchMedia('(max-width: 1024px)').matches) {
             const infoCard = document.getElementById('info-card');
-            if (infoCard) infoCard.classList.remove('visible');
+            if (infoCard) {
+                infoCard.classList.remove('visible');
+                // Force a style update if needed, but removing class should trigger transition
+            }
         }
     },
 
@@ -95,8 +98,8 @@ const Panels = {
         const panel = document.getElementById('left-panel');
         if (panel) panel.classList.remove('visible');
 
-        // On mobile, show the bottom info-card back when closing the full panel
-        if (window.innerWidth <= 768 && this.currentCountry) {
+        // Restore info-card on mobile/tablet when details panel is closed
+        if (window.matchMedia('(max-width: 1024px)').matches && this.currentCountry) {
             const infoCard = document.getElementById('info-card');
             if (infoCard) infoCard.classList.add('visible');
         }
